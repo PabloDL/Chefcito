@@ -21,10 +21,11 @@ public class AuthenticationService {
 	private AuthenticationManager authManager;
 
 	public AuthenticationService(IUserRepository userRepository, PasswordEncoder passwordEncoder,
-			JwtService jwtService) {
+			JwtService jwtService,AuthenticationManager authManager) {
 		this.userRepository = userRepository;
 		this.passwordEncoder = passwordEncoder;
 		this.jwtService = jwtService;
+		this.authManager = authManager;
 	}
 
 	public AuthenticationResponse register(RegisterRequest request) {

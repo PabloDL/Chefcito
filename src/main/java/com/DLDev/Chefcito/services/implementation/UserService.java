@@ -15,7 +15,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.DLDev.Chefcito.entities.UserRole;
 import com.DLDev.Chefcito.repositories.IUserRepository;
 
 @Service("userService")

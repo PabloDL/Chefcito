@@ -1,5 +1,6 @@
 package com.DLDev.Chefcito.configuration;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,7 +18,6 @@ import com.DLDev.Chefcito.repositories.IUserRepository;
 public class ApplicationConfig {
 	
 	private final IUserRepository userRepository;
-	
 	
 	public ApplicationConfig(IUserRepository userRepository) {
 		this.userRepository = userRepository;
@@ -40,7 +40,6 @@ public class ApplicationConfig {
 	@Bean
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
-		
 	}
 	
 	@Bean

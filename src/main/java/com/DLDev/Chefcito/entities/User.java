@@ -23,6 +23,8 @@ import com.DLDev.Chefcito.helpers.Role;
 @Table
 public class User implements UserDetails {
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -45,11 +47,6 @@ public class User implements UserDetails {
 
 	@Column(name = "enabled")
 	private boolean enabled;
-
-//	@Column(name = "createdat")
-//	@CreationTimestamp
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-//	private Set<UserRole> userRoles = new HashSet<>();
 
 	public User() {
 	}
@@ -142,16 +139,6 @@ public class User implements UserDetails {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-
-	
-//	public Set<UserRole> getUserRoles() {
-//		return userRoles;
-//	}
-//
-//	public void setUserRoles(Set<UserRole> userRoles) {
-//		this.userRoles = userRoles;
-//	}
-
 	
 	@Override
 	public String toString() {
