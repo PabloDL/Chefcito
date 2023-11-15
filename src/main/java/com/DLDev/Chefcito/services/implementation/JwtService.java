@@ -20,11 +20,12 @@ import io.jsonwebtoken.security.Keys;
 public class JwtService {
 
 	private static final String SECRET_KEY = "96ba48a7741272163ab4bbc3050d1c9aca1f9a57cf8054376441c892ba71965d";
+	private static final long TOKEN_LIFETIME = TimeUnit.HOURS.toMillis(24);
 
 	public String extractUsername(String token) {
 		return extractClaim(token, Claims::getSubject);
 	}
-
+	
 	public String generateToken(UserDetails userDetails) {
 		return generateToken(new HashMap<>(), userDetails);
 	}
@@ -32,7 +33,7 @@ public class JwtService {
 	public String generateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
 		return Jwts.builder().setClaims(extraClaims).setSubject(userDetails.getUsername())
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(60)))
+				.setExpiration(new Date(System.currentTimeMillis() + TOKEN_LIFETIME))
 				.signWith(getSigningKey(), SignatureAlgorithm.HS256).compact();
 	}
 
