@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.DLDev.Chefcito.models.AuthenticationRequest;
-import com.DLDev.Chefcito.models.AuthenticationResponse;
-import com.DLDev.Chefcito.models.RegisterRequest;
+import com.DLDev.Chefcito.models.security.AuthenticationRequest;
+import com.DLDev.Chefcito.models.security.AuthenticationResponse;
+import com.DLDev.Chefcito.models.security.RegisterRequest;
 import com.DLDev.Chefcito.services.implementation.AuthenticationService;
 
 @RestController
-@RequestMapping("/api/v0.1/auth")
+@RequestMapping("/")
 public class AuthenticationController {
 
 	private AuthenticationService authService;
@@ -28,8 +28,8 @@ public class AuthenticationController {
 				authService.register(request));
 	}
 	
-	@PostMapping("/authenticate")
-	public ResponseEntity<AuthenticationResponse> register(
+	@PostMapping("/login")
+	public ResponseEntity<AuthenticationResponse> login(
 			@RequestBody AuthenticationRequest request){
 		return ResponseEntity.ok(
 				authService.authenticate(request));

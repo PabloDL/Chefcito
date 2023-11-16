@@ -1,4 +1,4 @@
-package com.DLDev.Chefcito.models;
+package com.DLDev.Chefcito.models.security;
 
 import java.util.Objects;
 
