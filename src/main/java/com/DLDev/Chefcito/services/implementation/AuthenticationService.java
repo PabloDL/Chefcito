@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.DLDev.Chefcito.entities.User;
 import com.DLDev.Chefcito.helpers.Role;
-import com.DLDev.Chefcito.models.AuthenticationRequest;
-import com.DLDev.Chefcito.models.AuthenticationResponse;
-import com.DLDev.Chefcito.models.RegisterRequest;
+import com.DLDev.Chefcito.models.security.AuthenticationRequest;
+import com.DLDev.Chefcito.models.security.AuthenticationResponse;
+import com.DLDev.Chefcito.models.security.RegisterRequest;
 import com.DLDev.Chefcito.repositories.IUserRepository;
 
 @Service

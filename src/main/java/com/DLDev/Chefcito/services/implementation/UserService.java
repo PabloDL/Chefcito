@@ -1,25 +1,18 @@
 package com.DLDev.Chefcito.services.implementation;
 
 import java.security.Principal;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.DLDev.Chefcito.models.ChangePasswordRequest;
 import com.DLDev.Chefcito.repositories.IUserRepository;
 import com.DLDev.Chefcito.entities.User;
+import com.DLDev.Chefcito.models.security.ChangePasswordRequest;
 
 @Service
 public class UserService implements UserDetailsService {

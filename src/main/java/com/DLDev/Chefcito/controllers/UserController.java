@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.DLDev.Chefcito.models.ChangePasswordRequest;
+import com.DLDev.Chefcito.models.security.ChangePasswordRequest;
 import com.DLDev.Chefcito.services.implementation.UserService;
 
 import java.security.Principal;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/user")
 public class UserController {
 
 	private UserService userService;
