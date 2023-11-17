@@ -19,10 +19,8 @@ public class Recipe {
 	private String title;
 	@Column
 	private String description;
-	
 	@OneToMany(mappedBy = "recipe")
 	private Set<Ingredient> ingredients;
-
 	@OneToMany(mappedBy = "recipe")
 	private List<Step> steps;
 

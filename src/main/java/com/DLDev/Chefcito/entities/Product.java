@@ -6,11 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 
 
 @Entity
-@Inheritance
-//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,11 +51,5 @@ public class Product {
 	public void setUnit(String unit) {
 		this.unit = unit;
 	}
-	
-	
-	
-	
-	
-	
 	
 }

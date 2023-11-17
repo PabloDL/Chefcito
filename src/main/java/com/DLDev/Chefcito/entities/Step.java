@@ -5,20 +5,24 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Step {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column
+	@Column(name = "`order`")
 	private int order;
 	@Column
-	private String description; 
-	@Column
+	private String description;
+	@ManyToOne
+	@JoinColumn(name = "recipe_id")
 	private Recipe recipe;
-	
-	public Step() {}
+
+	public Step() {
+	}
 
 	public Step(int order, String description, Recipe recipe) {
 		super();
@@ -58,7 +62,4 @@ public class Step {
 	public void setRecipe(Recipe recipe) {
 		this.recipe = recipe;
 	}
-	
-	
-	
 }

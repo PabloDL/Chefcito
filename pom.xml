@@ -37,12 +37,13 @@
 			<artifactId>spring-security-core</artifactId>
 		</dependency>
 		
+		<!-- Units of Measurement library-->
 		<dependency>
 			<groupId>javax.measure</groupId>
 			<artifactId>unit-api</artifactId>
 			<version>1.0</version>
 		</dependency>
-		
+			
 		<!-- Database-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

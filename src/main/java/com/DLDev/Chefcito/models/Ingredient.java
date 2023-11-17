@@ -3,12 +3,16 @@ package com.DLDev.Chefcito.models;
 import java.util.Objects;
 
 import javax.measure.MeasurementException;
+import javax.measure.Quantity;
 import javax.measure.format.UnitFormat;
 
-public class Ingredient {
+import com.DLDev.Chefcito.entities.Product;
+
+public class Ingredient extends Product {
 	private int id;
 	private String name;
-	private UnitFormat unit; 
+	private Quantity<?> amount;
+	
 	
 	public Ingredient() {}
 
@@ -38,7 +42,8 @@ public class Ingredient {
 	}
 
 	public void setUnit(String unit) throws MeasurementException { 
-		this.unit.parse(unit);			
+		this.unit.parse(unit);
+		
 	}
 
 	@Override
