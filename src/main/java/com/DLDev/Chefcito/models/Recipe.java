@@ -16,8 +16,7 @@ public class Recipe {
 
 	private List<String> steps;
 
-	public Recipe() {
-	}
+	public Recipe() {}
 
 	public Recipe(String title, String description, Map<Ingredient, Quantity<?>> ingredients, List<String> steps) {
 		this.title = title;

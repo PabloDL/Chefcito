@@ -1,9 +1,10 @@
 package com.DLDev.Chefcito.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.DLDev.Chefcito.entities.Ingredient;
 
-public interface IIngredientRepository extends JpaRepository<Ingredient, Integer>{
+
+@Repository
+public interface IIngredientRepository extends IProductRepository{
 
 }

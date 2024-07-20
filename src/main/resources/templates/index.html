@@ -5,14 +5,11 @@
 <head th:replace="~{fragments :: headerFragment}"></head>
 <body>
 	<div th:replace="~{fragments :: navbarFragment}"></div>
-<!------------------------------------------------------------------------------------------------------------------------------->
 
 	<div class="container d-flex">
-		<div th:replace="~{fragments :: sidebarFragment}"></div>
-		<img class="w-75" src="/Assets/UNLa.jpg">
+		<div style="width: 20%;" th:replace="~{fragments :: sidebarFragment}"></div>
+		<div class="content" style="width: 80%;"></div>
 	</div>
-<!------------------------------------------------------------------------------------------------------------------------------->
-	<div th:replace="~{fragments :: footerFragment}"></div>
-	<script src="/js/dropDown.js"></script>	
+	<div th:replace="~{fragments :: footerFragment}"></div>	
 </body>
 </html>

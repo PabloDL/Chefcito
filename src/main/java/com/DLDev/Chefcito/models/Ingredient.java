@@ -3,22 +3,26 @@ package com.DLDev.Chefcito.models;
 import java.util.Objects;
 
 import javax.measure.MeasurementException;
-import javax.measure.Quantity;
 import javax.measure.format.UnitFormat;
 
-import com.DLDev.Chefcito.entities.Product;
-
 public class Ingredient extends Product {
+	
 	private int id;
 	private String name;
-	private Quantity<?> amount;
+	//private UnitFormat unit;
+	private String unit;
 	
+	public Ingredient() {
+		super();
+	}
 	
-	public Ingredient() {}
+	public Ingredient(String name, UnitFormat unit) {
+		super(name, unit);
+	}
 
 	public Ingredient(String name,String unit) {
 		this.name = name;
-		this.setUnit(unit);
+		this.unit = unit;
 	}
 
 	public int getId() {
@@ -37,14 +41,13 @@ public class Ingredient extends Product {
 		this.name = name;
 	}
 	
-	public UnitFormat getUnit() {
-		return unit;
-	}
-
-	public void setUnit(String unit) throws MeasurementException { 
-		this.unit.parse(unit);
-		
-	}
+//	public UnitFormat getUnit() {
+//		return unit;
+//	}
+//
+//	public void setUnit(String unit) throws MeasurementException { 
+//		this.unit.parse(unit);
+//	}
 
 	@Override
 	public String toString() {
@@ -67,5 +70,4 @@ public class Ingredient extends Product {
 		Ingredient other = (Ingredient) obj;
 		return id == other.id && Objects.equals(name, other.name);
 	}
-
 }
