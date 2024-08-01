@@ -1,0 +1,56 @@
+{
+  "title": "Flan",
+  "description": "El flan es un postre tradicional latinoamericano conocido por su textura suave y sabor intenso. Se puede servir frío o caliente, y es comúnmente decorado con dulce de leche.",
+  "Ingredients": [
+    {
+      "name": "Huevos",
+      "amount": "6",
+      "unit": "unidades"
+    },
+    {
+      "name": "Azúcar",
+      "amount": "200",
+      "unit": "gramos"
+    },
+    {
+      "name": "Leche condensada",
+      "amount": "400",
+      "unit": "mililitros"
+    },
+    {
+      "name": "Caramelo",
+      "amount": "100",
+      "unit": "gramos"
+    }
+  ],
+  "Steps": [
+    {
+      "order": 1,
+      "description": "Precalienta el horno a 150°C."
+    },
+    {
+      "order": 2,
+      "description": "En un bol grande, bate los huevos con la mitad de la azúcar hasta obtener una mezcla espumosa."
+    },
+    {
+      "order": 3,
+      "description": "Agrega la leche condensada al bol y mezcla bien hasta integrar."
+    },
+    {
+      "order": 4,
+      "description": "Vierte el caramelo derretido en el fondo de un molde para hacer el corteza."
+    },
+    {
+      "order": 5,
+      "description": "Verter la mezcla de huevos y leche condensada sobre el caramelo."
+    },
+    {
+      "order": 6,
+      "description": "Hornea durante 30 minutos a 150°C. Verifica si está cocido insertando un palillo; si sale limpio, el flan está listo."
+    },
+    {
+      "order": 7,
+      "description": "Deja enfriar antes de desmoldar y servir."
+    }
+  ]
+}

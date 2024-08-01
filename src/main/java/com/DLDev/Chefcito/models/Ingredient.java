@@ -5,24 +5,26 @@ import java.util.Objects;
 import javax.measure.MeasurementException;
 import javax.measure.format.UnitFormat;
 
-public class Ingredient extends Product {
+import javax.measure.Quantity;
+import javax.measure.quantity.Mass;
+import javax.measure.quantity.Volume;
+import javax.measure.spi.SystemOfUnits;
+import javax.measure.spi.SystemOfUnitsService;
+import javax.measure.unit.BaseUnit;
+
+
+public class Ingredient extends Product{
 	
 	private int id;
-	private String name;
-	//private UnitFormat unit;
-	private String unit;
-	
+	private double amount;
+		
 	public Ingredient() {
 		super();
 	}
 	
-	public Ingredient(String name, UnitFormat unit) {
+	public Ingredient(String name, String unit, double amount) {
 		super(name, unit);
-	}
-
-	public Ingredient(String name,String unit) {
-		this.name = name;
-		this.unit = unit;
+		this.amount = amount;
 	}
 
 	public int getId() {
@@ -33,41 +35,17 @@ public class Ingredient extends Product {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public double getAmount() {
+		return amount;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-//	public UnitFormat getUnit() {
-//		return unit;
-//	}
-//
-//	public void setUnit(String unit) throws MeasurementException { 
-//		this.unit.parse(unit);
-//	}
-
-	@Override
-	public String toString() {
-		return "Ingredient [id=" + id + ", name=" + name + "]";
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name);
+		return Objects.hash(amount, super.getName(), super.getStringUnit());
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Ingredient other = (Ingredient) obj;
-		return id == other.id && Objects.equals(name, other.name);
-	}
+	
 }

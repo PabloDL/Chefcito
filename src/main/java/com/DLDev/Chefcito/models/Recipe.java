@@ -11,14 +11,17 @@ public class Recipe {
 	private int id;
 	private String title;
 	private String description;
-
-	private Map<Ingredient, Quantity<?>> ingredients;
-
-	private List<String> steps;
-
+	private List<Ingredient> ingredients;
+	private Map<Integer, String> steps;
+	
 	public Recipe() {}
 
-	public Recipe(String title, String description, Map<Ingredient, Quantity<?>> ingredients, List<String> steps) {
+	public Recipe(String title, String description) {
+		this.title = title;
+		this.description = description;
+	}
+	
+	public Recipe(String title, String description, List<Ingredient> ingredients, Map<Integer, String> steps) {
 		this.title = title;
 		this.description = description;
 		this.ingredients = ingredients;
@@ -49,19 +52,19 @@ public class Recipe {
 		this.description = description;
 	}
 
-	public Map<Ingredient, Quantity<?>> getIngredients() {
+	public List<Ingredient> getIngredients() {
 		return ingredients;
 	}
 
-	public void setIngredients(Map<Ingredient, Quantity<?>> ingredients) {
+	public void setIngredients(List<Ingredient> ingredients) {
 		this.ingredients = ingredients;
 	}
 
-	public List<String> getSteps() {
+	public Map<Integer, String> getSteps() {
 		return steps;
 	}
 
-	public void setSteps(List<String> steps) {
+	public void setSteps(Map<Integer, String> steps) {
 		this.steps = steps;
 	}
 
